@@ -90,7 +90,7 @@ public class ElementActions {
 	}
 	
 	/**
-	 * This method will explicitly wait for the element located by the given locator to be clickable
+	 * This method will explicitly wait for the element located by the given locator to be Clickbale
 	 * @param locator
 	 */
 	public void waitUntilElementIsClickable(By locator) {
