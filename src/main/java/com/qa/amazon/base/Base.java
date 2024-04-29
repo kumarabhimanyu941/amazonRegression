@@ -14,36 +14,74 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Base {
 
 	public WebDriver driver;
-	public String browser;
+	public String browserName;
 	public Properties prop;
 	public String url;
-	
+	public FileInputStream fis;
 	
 	@BeforeTest
 	public void init_prop() {
+		
+		String envName=System.getProperty("env");
+		
+	   switch (envName.toLowerCase()) {
+	case "qa":
 		try {
-		FileInputStream fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
-		prop = new Properties();
-		prop.load(fis);
-		browser=prop.getProperty("browser");
+		fis = new FileInputStream("../src/main/java/com/qa/amazon/configuration/qa.config.properties");
+		System.out.println("Running the test cases on the QA environment");
 		}
-		catch(Exception exception) {
+		catch (Exception exception) {
 			exception.getMessage();
 			exception.printStackTrace();
 		}
+
+	case "stage":
+		try {
+		fis = new FileInputStream("../src/main/java/com/qa/amazon/configuration/stage.config.properties");
+		System.out.println("Running the test cases on the stage environment");
+		}
+		catch (Exception exception) {
+			exception.getMessage();
+			exception.printStackTrace();
+		}
+	default:
+		try {
+			fis = new FileInputStream("../src/main/java/com/qa/amazon/configuration/qa.config.properties");
+			System.out.println("Running the test cases on the QA environment by default since no env has been specified");
+			}
+			catch (Exception exception) {
+				exception.getMessage();
+				exception.printStackTrace();
+		System.out.println("Incorrect environment passed.Please pass correct environment value");
+	}
 		
+	   prop = new Properties();
+	  
+	   try {
+	   prop.load(fis);
+	   browserName=prop.getProperty("browser");
+	   System.out.println("Running the test cases on "+ browserName);
+	   }
+	   catch(Exception exception) {
+		   System.out.println("Some exception occurred while loading the properties file");
+		   exception.getMessage();
+		   exception.printStackTrace();
+		   
+	   }
+	   }
+	   
 	}
 	
 	@Test
 	public void init_driver() {
 		
 		
-		if(browser.equalsIgnoreCase("chrome")) {
+		if(browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		
-		if(browser.equalsIgnoreCase("firefox")) {
+		if(browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new ChromeDriver();
 		
