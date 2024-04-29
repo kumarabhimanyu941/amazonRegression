@@ -19,15 +19,30 @@ public class Base {
 	public String url;
 	public FileInputStream fis;
 	
-	@BeforeTest
-	public void init_prop() {
+
+	public Properties init_prop() {
 		
 		String envName=System.getProperty("env");
+		
+		if(envName==null) {
+			try {
+				fis=new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
+				System.out.println("Running the test cases on QA env since no environment is passed by the user");
+			}
+			catch (Exception exception) {
+				exception.getMessage();
+				exception.printStackTrace();
+			}
+		}
+		
+		
+		else {
+		
 		
 	   switch (envName.toLowerCase()) {
 	case "qa":
 		try {
-		fis = new FileInputStream("../src/main/java/com/qa/amazon/configuration/qa.config.properties");
+		fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
 		System.out.println("Running the test cases on the QA environment");
 		}
 		catch (Exception exception) {
@@ -37,7 +52,7 @@ public class Base {
 
 	case "stage":
 		try {
-		fis = new FileInputStream("../src/main/java/com/qa/amazon/configuration/stage.config.properties");
+		fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/stage.config.properties");
 		System.out.println("Running the test cases on the stage environment");
 		}
 		catch (Exception exception) {
@@ -45,22 +60,16 @@ public class Base {
 			exception.printStackTrace();
 		}
 	default:
-		try {
-			fis = new FileInputStream("../src/main/java/com/qa/amazon/configuration/qa.config.properties");
-			System.out.println("Running the test cases on the QA environment by default since no env has been specified");
-			}
-			catch (Exception exception) {
-				exception.getMessage();
-				exception.printStackTrace();
-		System.out.println("Incorrect environment passed.Please pass correct environment value");
-	}
+		System.out.println("Please pass valid environment details.Terminating the test execution");
 		
-	   prop = new Properties();
+	   }
+	   }
+		
+	  prop = new Properties();
 	  
 	   try {
 	   prop.load(fis);
-	   browserName=prop.getProperty("browser");
-	   System.out.println("Running the test cases on "+ browserName);
+	   
 	   }
 	   catch(Exception exception) {
 		   System.out.println("Some exception occurred while loading the properties file");
@@ -68,14 +77,15 @@ public class Base {
 		   exception.printStackTrace();
 		   
 	   }
-	   }
-	   
+	  	
+	   return prop;
 	}
 	
-	@Test
-	public void init_driver() {
+
+	public WebDriver init_driver(Properties prop) {
 		
-		
+		browserName=prop.getProperty("browser");
+		System.out.println("Running the test cases on "+ browserName);
 		if(browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -90,7 +100,8 @@ public class Base {
 		driver.get(prop.getProperty("qaurl"));
 		driver.manage().window().maximize();
 		
-		driver.quit();
+		
+		return driver;
 	}
 	
 

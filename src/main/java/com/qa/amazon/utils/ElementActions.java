@@ -20,6 +20,7 @@ public class ElementActions {
 	//Creating the constructor of the ElementActions class
 	
     public ElementActions(WebDriver driver) {
+    	this.driver=driver;
     	action = new Actions(driver);
     	explicitwait = new WebDriverWait(driver,Duration.ofSeconds(AppConstants.EXPLICIT_WAIT));
     }
@@ -125,11 +126,7 @@ public class ElementActions {
 		explicitwait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 	
-	
-	
-	
-	
-	
+
 	
 	
 }
