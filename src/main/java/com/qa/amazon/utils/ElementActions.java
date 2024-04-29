@@ -79,6 +79,34 @@ public class ElementActions {
 		action.moveToElement(element).doubleClick();	
 		
 	}
+	
+	/**
+	 * This method will return the current page title
+	 	 * @return current page title
+	 */
+	public String getCurrentPageTitle() {
+		return driver.getTitle();
+	}
+	
+	/**
+	 * This method will return the current page URL
+	 	 * @return current page title
+	 */
+	public String getCurrentPageURL() {
+		return driver.getCurrentUrl();
+	}
+	
+	/**
+	 * This method will fetch and return the text of the element located by the By locator
+	 * @param locator
+	 * @return text of the element located by the By locator
+	 */
+	public String doGetText(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
+	
+	
 /**
  * This method will explicitly wait for the visibility of the element located by the given locator
  * @param locator
