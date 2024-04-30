@@ -6,7 +6,7 @@
 
     <listeners>
 		<listener
-			class-name="com.qa.gorest.Listeners.ExtentReportListener" />
+			class-name="com.qa.amazon.listeners.ExtentReportListener" />
 	</listeners>
 
 
