@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-30T11:23:28 IST" name="Amazon Regression Test Suite" finished-at="2024-04-30T11:24:26 IST" duration-ms="57246">
+  <suite started-at="2024-04-30T12:52:58 IST" name="Amazon Regression Test Suite" finished-at="2024-04-30T12:53:34 IST" duration-ms="35573">
     <groups>
     </groups>
-    <test started-at="2024-04-30T11:23:28 IST" name="Amazon Regression Test_LandingPage_Chrome" finished-at="2024-04-30T11:24:00 IST" duration-ms="31613">
+    <test started-at="2024-04-30T12:52:58 IST" name="Amazon Regression Test_LandingPage_Chrome" finished-at="2024-04-30T12:53:32 IST" duration-ms="34173">
       <class name="com.qa.amazon.tests.LandingPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@70f59913]" started-at="2024-04-30T11:23:28 IST" name="setup" finished-at="2024-04-30T11:23:56 IST" duration-ms="28143" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@5536379e]" started-at="2024-04-30T12:52:58 IST" name="setup" finished-at="2024-04-30T12:53:31 IST" duration-ms="32394" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,46 +18,46 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getLandingPageTitleTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@70f59913]" started-at="2024-04-30T11:23:57 IST" name="getLandingPageTitleTest" finished-at="2024-04-30T11:23:57 IST" duration-ms="110" status="PASS">
+        <test-method signature="getLandingPageTitleTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@5536379e]" started-at="2024-04-30T12:53:31 IST" name="getLandingPageTitleTest" finished-at="2024-04-30T12:53:31 IST" duration-ms="354" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLandingPageTitleTest -->
-        <test-method signature="getLandingPageURLTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@70f59913]" started-at="2024-04-30T11:23:57 IST" name="getLandingPageURLTest" finished-at="2024-04-30T11:23:57 IST" duration-ms="95" status="PASS">
+        <test-method signature="getLandingPageURLTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@5536379e]" started-at="2024-04-30T12:53:31 IST" name="getLandingPageURLTest" finished-at="2024-04-30T12:53:31 IST" duration-ms="242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLandingPageURLTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@70f59913]" started-at="2024-04-30T11:23:57 IST" name="teardown" finished-at="2024-04-30T11:24:00 IST" duration-ms="3162" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@5536379e]" started-at="2024-04-30T12:53:31 IST" name="teardown" finished-at="2024-04-30T12:53:32 IST" duration-ms="1106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.amazon.tests.LandingPageTest -->
     </test> <!-- Amazon Regression Test_LandingPage_Chrome -->
-    <test started-at="2024-04-30T11:24:01 IST" name="Amazon Regression Test_LandingPage_Firefox" finished-at="2024-04-30T11:24:26 IST" duration-ms="24966">
+    <test started-at="2024-04-30T12:52:58 IST" name="Amazon Regression Test_LandingPage_Edge" finished-at="2024-04-30T12:53:34 IST" duration-ms="35573">
       <class name="com.qa.amazon.tests.LandingPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@7203c7ff]" started-at="2024-04-30T11:24:01 IST" name="setup" finished-at="2024-04-30T11:24:25 IST" duration-ms="24436" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@24fb6a80]" started-at="2024-04-30T12:52:58 IST" name="setup" finished-at="2024-04-30T12:53:30 IST" duration-ms="31297" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getLandingPageTitleTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@7203c7ff]" started-at="2024-04-30T11:24:25 IST" name="getLandingPageTitleTest" finished-at="2024-04-30T11:24:25 IST" duration-ms="129" status="PASS">
+        <test-method signature="getLandingPageTitleTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@24fb6a80]" started-at="2024-04-30T12:53:30 IST" name="getLandingPageTitleTest" finished-at="2024-04-30T12:53:31 IST" duration-ms="854" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLandingPageTitleTest -->
-        <test-method signature="getLandingPageURLTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@7203c7ff]" started-at="2024-04-30T11:24:25 IST" name="getLandingPageURLTest" finished-at="2024-04-30T11:24:25 IST" duration-ms="15" status="PASS">
+        <test-method signature="getLandingPageURLTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@24fb6a80]" started-at="2024-04-30T12:53:31 IST" name="getLandingPageURLTest" finished-at="2024-04-30T12:53:31 IST" duration-ms="61" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLandingPageURLTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@7203c7ff]" started-at="2024-04-30T11:24:25 IST" name="teardown" finished-at="2024-04-30T11:24:26 IST" duration-ms="378" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@24fb6a80]" started-at="2024-04-30T12:53:31 IST" name="teardown" finished-at="2024-04-30T12:53:34 IST" duration-ms="2754" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.amazon.tests.LandingPageTest -->
-    </test> <!-- Amazon Regression Test_LandingPage_Firefox -->
+    </test> <!-- Amazon Regression Test_LandingPage_Edge -->
   </suite> <!-- Amazon Regression Test Suite -->
 </testng-results>

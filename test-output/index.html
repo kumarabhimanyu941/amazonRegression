@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Amazon_Regression_Test_Suite" class="navigator-link ">
-                    <span>C:\Users\kumar.abhimanyu\eclipse-workspace\com.amazonqa.regression\runners\amazonqa_regression.xml</span>
+                    <span>C:\Users\kumar.abhimanyu\eclipse-workspace\com.amazonqa.regression\src\test\resources\testRunners\amazonqa_regression.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -172,28 +172,29 @@
         </div> <!-- panel Amazon_Regression_Test_Suite -->
         <div panel-name="test-xml-Amazon_Regression_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kumar.abhimanyu\eclipse-workspace\com.amazonqa.regression\runners\amazonqa_regression.xml</span>
+            <span class="header-content">C:\Users\kumar.abhimanyu\eclipse-workspace\com.amazonqa.regression\src\test\resources\testRunners\amazonqa_regression.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Amazon Regression Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;3&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Amazon Regression Test Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;3&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.qa.amazon.listeners.ExtentReportListener&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.amazon.listeners.AllureReportListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Amazon Regression Test_LandingPage_Chrome&quot; verbose=&quot;3&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Amazon Regression Test_LandingPage_Chrome&quot; verbose=&quot;3&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.amazon.tests.LandingPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Amazon Regression Test_LandingPage_Chrome --&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Amazon Regression Test_LandingPage_Firefox&quot; verbose=&quot;3&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Amazon Regression Test_LandingPage_Edge&quot; verbose=&quot;3&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.amazon.tests.LandingPageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Amazon Regression Test_LandingPage_Firefox --&gt;
+  &lt;/test&gt; &lt;!-- Amazon Regression Test_LandingPage_Edge --&gt;
 &lt;/suite&gt; &lt;!-- Amazon Regression Test Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -208,7 +209,7 @@
                 <span class="test-name">Amazon Regression Test_LandingPage_Chrome (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Amazon Regression Test_LandingPage_Firefox (1 class)</span>
+                <span class="test-name">Amazon Regression Test_LandingPage_Edge (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -238,24 +239,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'getLandingPageTitleTest')
 data.setCell(0, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(0, 3, 129);
+data.setCell(0, 3, 854);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'getLandingPageTitleTest')
 data.setCell(1, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(1, 3, 110);
+data.setCell(1, 3, 354);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'getLandingPageURLTest')
 data.setCell(2, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(2, 3, 95);
+data.setCell(2, 3, 242);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'getLandingPageURLTest')
 data.setCell(3, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(3, 3, 15);
+data.setCell(3, 3, 61);
 window.suiteTableData['Amazon_Regression_Test_Suite']= { tableData: data, tableDiv: 'times-div-Amazon_Regression_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 35 seconds</span>
               <div id="times-div-Amazon_Regression_Test_Suite">
               </div> <!-- times-div-Amazon_Regression_Test_Suite -->
             </div> <!-- times-div -->
@@ -283,36 +284,36 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.amazon.tests.LandingPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">setup(chrome)</span>
+                <span class="method-name">setup(edge)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="test-method">
-                <span class="method-name">getLandingPageTitleTest</span>
-                <span class="method-start">28202 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">getLandingPageURLTest</span>
-                <span class="method-start">28325 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">28433 ms</span>
-              </div> <!-- configuration-test after -->
               <div class="configuration-test before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">32263 ms</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">getLandingPageTitleTest</span>
-                <span class="method-start">56701 ms</span>
+                <span class="method-start">31400 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getLandingPageTitleTest</span>
+                <span class="method-start">32397 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getLandingPageURLTest</span>
-                <span class="method-start">56832 ms</span>
+                <span class="method-start">32710 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getLandingPageURLTest</span>
+                <span class="method-start">32777 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">56850 ms</span>
+                <span class="method-start">32786 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">33035 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

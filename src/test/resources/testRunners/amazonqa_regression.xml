@@ -6,6 +6,7 @@
 
 <listeners>
 <listener class-name="com.qa.amazon.listeners.ExtentReportListener"></listener>
+<listener class-name="com.qa.amazon.listeners.AllureReportListener"></listener>
 </listeners>
 
 
