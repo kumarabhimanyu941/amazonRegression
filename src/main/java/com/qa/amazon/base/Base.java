@@ -5,6 +5,8 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -82,18 +84,18 @@ public class Base {
 	}
 	
 
-	public WebDriver init_driver(Properties prop) {
+	public WebDriver init_driver(Properties prop,String browserName) {
 		
-		browserName=prop.getProperty("browser");
+		//browserName=prop.getProperty("browser");
 		System.out.println("Running the test cases on "+ browserName);
 		if(browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		
-		if(browserName.equalsIgnoreCase("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new ChromeDriver();
+		if(browserName.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
+			driver = new EdgeDriver();
 		
 		}
 		driver.manage().deleteAllCookies();

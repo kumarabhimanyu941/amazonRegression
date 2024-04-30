@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.qa.amazon.base.Base;
@@ -22,12 +23,14 @@ public class LandingPageTest {
 	public Properties prop;
 	public WebDriver driver;
 	
+	
 	@BeforeTest
-	public void setup() {
+	@Parameters("browser")
+	public void setup(String browser) {
 		base=new Base();
 		prop= new Properties();
 		prop=base.init_prop();
-		driver=base.init_driver(prop);
+		driver=base.init_driver(prop,browser);
 		landingpage = new LandingPage(driver);
 	}
 	
