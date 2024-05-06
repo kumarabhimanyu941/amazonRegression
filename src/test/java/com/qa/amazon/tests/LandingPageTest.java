@@ -51,7 +51,10 @@ public class LandingPageTest {
 	}
 	
 	
-	
+	@Test
+	public void verifyPresenceOfSignInBtnTest() {
+		Assert.assertTrue(landingpage.verifyPresenceOfSignInBtn());
+	}
 
 	@AfterTest
 	public void teardown() {

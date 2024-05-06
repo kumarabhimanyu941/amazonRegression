@@ -5,9 +5,9 @@
     <classes>
       <class name="com.qa.amazon.tests.LandingPageTest">
         <methods>
+          <include name="verifyPresenceOfSignInBtnTest"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="getLandingPageURLTest"/>
         </methods>
       </class> <!-- com.qa.amazon.tests.LandingPageTest -->
     </classes>
