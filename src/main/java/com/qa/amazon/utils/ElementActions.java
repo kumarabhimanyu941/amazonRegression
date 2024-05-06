@@ -126,7 +126,28 @@ public class ElementActions {
 		explicitwait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 	
+	/**
+	    * This method will move the control to the element located by the given locator
+	    * @param locator
+	    */
+		public void hoverOverElement(By locator) {
+			WebElement element=getElement(locator);
+			action.moveToElement(element);
+		}
 
-	
-	
-}
+		/**
+		 * This method will check if the given element is present and enabled on the page
+		 * @param locator
+		 * @return
+		 */
+		public boolean checkPresenceOfElement(By locator) {
+			return driver.findElement(locator).isEnabled();
+			
+		}
+			
+			
+			
+		}
+		
+		
+

@@ -15,7 +15,7 @@ public class LandingPage {
 	By amazonLogo = By.xpath("//a[@aria-label='Amazon.in']");
 	By landingPageSearchBox= By.xpath("//input[@id='twotabsearchtextbox']");
 	By helloSignInLogo=By.xpath("//span[text()='Hello, sign in']");
-	
+	By SignInBtn = By.xpath("//span[text()='Sign in']");
 	
 	public LandingPage(WebDriver driver) {
 		this.driver=driver;
@@ -65,5 +65,19 @@ public class LandingPage {
 		return elementactions.doGetText(amazonLogo);
 		
 	}
+	
+   /**
+    * This method will verify if the Sign In Button is present and enabled or not.
+    * @return
+    */
+	public boolean verifyPresenceOfSignInBtn() {
+		elementactions.hoverOverElement(helloSignInLogo);
+		return elementactions.checkPresenceOfElement(SignInBtn);
+		
+	}
+	
+	
+	
+	
 	
 }
