@@ -2,6 +2,7 @@ allure-results/
 test-output/
 report/
 build/
+*.html
 
 application.log
 ##############################
@@ -13,6 +14,7 @@ application.log
 *.war
 *.ear
 *.nar
+*.html
 hs_err_pid*
 activityLog.log
 ##############################
