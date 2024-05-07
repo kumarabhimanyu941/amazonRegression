@@ -4,10 +4,7 @@
 <suite name="Amazon Regression Test Suite" thread-count="5" parallel ="tests" verbose ="3">
 
 
-<listeners>
-<listener class-name="com.qa.amazon.listeners.ExtentReportListener"></listener>
-<listener class-name="com.qa.amazon.listeners.AllureReportListener"></listener>
-</listeners>
+
 
 
 <test name="Amazon Regression Test_LandingPage_Chrome">
