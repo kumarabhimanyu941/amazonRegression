@@ -1,6 +1,6 @@
 package com.qa.amazon.utils;
 
-import java.time.Duration;
+
 
 public class AppConstants {
 
@@ -8,7 +8,8 @@ public class AppConstants {
 	
 	public static String LANDING_PAGE_URL="https://www.amazon.in/";
 	public static String LANDING_PAGE_TITLE="Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
-	
+	public static String SIGNIN_PAGE_TITLE="Amazon Sign In";
+	public static String HELLO_SIGNINICON_TEXT="Hello, sign in";
 	
 	
 }

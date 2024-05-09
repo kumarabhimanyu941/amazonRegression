@@ -36,7 +36,7 @@ public class ElementActions {
 			
 		}
 		catch(Exception exception) {
-			System.out.println("Some exception occurred while trying to fetch element");
+			System.out.println("SOME EXCEPTION OCUURED WHILE TRYING TO FETCH THE ELEMENT "+ locator);
 			
 		}
 		return element;
@@ -127,12 +127,20 @@ public class ElementActions {
 	}
 	
 	/**
+	 * This method will wait until the page contains the given title
+	 * @param title
+	 */
+	public void waitUntilPageContainsTitle(String title) {
+		explicitwait.until(ExpectedConditions.titleContains(title));	
+				
+	}
+	/**
 	    * This method will move the control to the element located by the given locator
 	    * @param locator
 	    */
 		public void hoverOverElement(By locator) {
 			WebElement element=getElement(locator);
-			action.moveToElement(element);
+			action.moveToElement(element).build().perform();
 		}
 
 		/**
@@ -146,6 +154,16 @@ public class ElementActions {
 		}
 			
 			
+		/**
+		 * This method will check if the given element is present and displayed on the page
+		 * @param locator
+		 * @return
+		 */
+		public boolean IsElementDisplayed(By locator) {
+			return driver.findElement(locator).isDisplayed();
+			
+		}
+		
 			
 		}
 		

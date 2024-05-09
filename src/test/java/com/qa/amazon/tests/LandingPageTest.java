@@ -6,7 +6,9 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -24,7 +26,7 @@ public class LandingPageTest {
 	public WebDriver driver;
 	
 	
-	@BeforeTest
+	@BeforeMethod
 	@Parameters("browser")
 	public void setup(String browser) {
 		base=new Base();
@@ -56,7 +58,13 @@ public class LandingPageTest {
 		Assert.assertTrue(landingpage.verifyPresenceOfSignInBtn());
 	}
 
-	@AfterTest
+	@Test
+	public void verifyHelloSignInText() {
+		String helloSignInIconText=landingpage.getHelloSignInIconText();
+		Assert.assertEquals(helloSignInIconText, AppConstants.HELLO_SIGNINICON_TEXT);
+	}
+	
+	@AfterMethod
 	public void teardown() {
 		driver.quit();
 	}

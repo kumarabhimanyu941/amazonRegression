@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.amazon.tests.LandingPageTest">
+      <class name="com.qa.amazon.tests.SignInPageTest">
         <methods>
-          <include name="verifyPresenceOfSignInBtnTest"/>
+          <include name="VerifySignInTest"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.qa.amazon.tests.LandingPageTest -->
+      </class> <!-- com.qa.amazon.tests.SignInPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
