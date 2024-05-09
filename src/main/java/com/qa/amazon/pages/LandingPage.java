@@ -14,8 +14,8 @@ public class LandingPage {
 	
 	By amazonLogo = By.xpath("//a[@aria-label='Amazon.in']");
 	By landingPageSearchBox= By.xpath("//input[@id='twotabsearchtextbox']");
-	By helloSignInLogo=By.xpath("//span[text()='Hello, sign in']");
-	By SignInBtn = By.xpath("//span[text()='Sign in']");
+	By helloSignInLogo= By.xpath("//span[text()='Hello, sign in']");
+	By SignInBtn = By.xpath("//div[@id='nav-flyout-ya-signin']//span[text()='Sign in']");
 	
 	public LandingPage(WebDriver driver) {
 		this.driver=driver;
@@ -50,7 +50,7 @@ public class LandingPage {
 	 * This method will fetch and return the text of the Sign In logo on the landing page
 	 * @return text of the Sign In logo on the landing page
 	 */
-	public String getSignInIconText() {
+	public String getHelloSignInIconText() {
 		return elementactions.doGetText(helloSignInLogo);
 		
 	}
@@ -77,6 +77,16 @@ public class LandingPage {
 	}
 	
 	
+	/**
+	 * This method will click on the SignIn button
+	 * @return SignInPage object
+	 */
+	public SignInPage clickOnSignInBtn() {
+		elementactions.hoverOverElement(helloSignInLogo);
+		elementactions.doClick(SignInBtn);
+		return new SignInPage(driver);
+		
+	}
 	
 	
 	
