@@ -148,7 +148,7 @@ public class ElementActions {
 		 * @param locator
 		 * @return
 		 */
-		public boolean checkPresenceOfElement(By locator) {
+		public boolean checkIsElementEnabled(By locator) {
 			return driver.findElement(locator).isEnabled();
 			
 		}
