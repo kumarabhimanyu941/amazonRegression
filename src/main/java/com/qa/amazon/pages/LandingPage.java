@@ -72,7 +72,7 @@ public class LandingPage {
     */
 	public boolean verifyPresenceOfSignInBtn() {
 		elementactions.hoverOverElement(helloSignInLogo);
-		return elementactions.checkPresenceOfElement(SignInBtn);
+		return elementactions.checkIsElementEnabled(SignInBtn);
 		
 	}
 	
