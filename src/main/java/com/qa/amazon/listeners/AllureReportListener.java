@@ -64,8 +64,8 @@ public class AllureReportListener extends Base implements ITestListener {
 		//WebDriver driver = BasePage.getDriver();
 		// Allure ScreenShotRobot and SaveTestLog
 		  getScreenshot();
-		    System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
-			saveScreenshotPNG(driver);
+		  System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
+	      saveScreenshotPNG(driver);
 		
 		// Save a log on allure.
 		saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");		
