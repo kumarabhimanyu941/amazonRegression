@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Amazon Regression Test Suite</span>
+              <span class="suite-name border-skipped">Amazon Regression Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">12 methods,  1 skipped,  11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" class="hide-methods skipped suite-Amazon_Regression_Test_Suite"> (hide)</a> <!-- hide-methods skipped suite-Amazon_Regression_Test_Suite -->
+                      <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" class="show-methods skipped suite-Amazon_Regression_Test_Suite"> (show)</a> <!-- show-methods skipped suite-Amazon_Regression_Test_Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Amazon_Regression_Test_Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" title="com.qa.amazon.tests.SignInPageTest" class="method navigator-link" hash-for-method="isSignInLogoDisplayedTest">isSignInLogoDisplayedTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Amazon_Regression_Test_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +117,16 @@
                     <div class="method-list-content passed suite-Amazon_Regression_Test_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" title="com.qa.amazon.tests.HomePageTest" class="method navigator-link" hash-for-method="IsHomePageSearchBoxEnablededTest">IsHomePageSearchBoxEnablededTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" title="com.qa.amazon.tests.HomePageTest" class="method navigator-link" hash-for-method="IsHomePageSearchIconEnablededTest">IsHomePageSearchIconEnablededTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" title="com.qa.amazon.tests.LandingPageTest" class="method navigator-link" hash-for-method="getLandingPageTitleTest">getLandingPageTitleTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -119,11 +143,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" title="com.qa.amazon.tests.LandingPageTest" class="method navigator-link" hash-for-method="getLandingPageURLTest">getLandingPageURLTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Amazon_Regression_Test_Suite" title="com.qa.amazon.tests.SignInPageTest" class="method navigator-link" hash-for-method="isSignInLogoDisplayedTest">isSignInLogoDisplayedTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -163,6 +182,63 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Amazon_Regression_Test_Suite" class="panel Amazon_Regression_Test_Suite">
+          <div class="suite-Amazon_Regression_Test_Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.qa.amazon.tests.SignInPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="isSignInLogoDisplayedTest">
+                  </a> <!-- isSignInLogoDisplayedTest -->
+                  <span class="method-name">isSignInLogoDisplayedTest</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: Element must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+	at org.openqa.selenium.interactions.PointerInput$Origin.fromElement(PointerInput.java:277)
+	at org.openqa.selenium.interactions.Actions.moveInTicks(Actions.java:345)
+	at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:324)
+	at com.qa.amazon.utils.ElementActions.hoverOverElement(ElementActions.java:143)
+	at com.qa.amazon.pages.LandingPage.clickOnSignInBtn(LandingPage.java:85)
+	at com.qa.amazon.tests.SignInPageTest.setup(SignInPageTest.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Amazon_Regression_Test_Suite-class-skipped -->
           <div class="suite-Amazon_Regression_Test_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -240,11 +316,26 @@
                   <span class="method-name">isSignInLogoDisplayedTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Amazon_Regression_Test_Suite-class-passed -->
+          <div class="suite-Amazon_Regression_Test_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.qa.amazon.tests.HomePageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="isSignInLogoDisplayedTest">
-                  </a> <!-- isSignInLogoDisplayedTest -->
-                  <span class="method-name">isSignInLogoDisplayedTest</span>
+                  <a name="IsHomePageSearchBoxEnablededTest">
+                  </a> <!-- IsHomePageSearchBoxEnablededTest -->
+                  <span class="method-name">IsHomePageSearchBoxEnablededTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="IsHomePageSearchIconEnablededTest">
+                  </a> <!-- IsHomePageSearchIconEnablededTest -->
+                  <span class="method-name">IsHomePageSearchIconEnablededTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -268,6 +359,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.amazon.tests.LandingPageTest&quot;/&gt;
       &lt;class name=&quot;com.qa.amazon.tests.SignInPageTest&quot;/&gt;
+      &lt;class name=&quot;com.qa.amazon.tests.HomePageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Amazon Regression Test_LandingPage_Chrome --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Amazon Regression Test_LandingPage_Edge&quot; verbose=&quot;3&quot;&gt;
@@ -288,7 +380,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Amazon Regression Test_LandingPage_Chrome (2 classes)</span>
+                <span class="test-name">Amazon Regression Test_LandingPage_Chrome (3 classes)</span>
               </li>
               <li>
                 <span class="test-name">Amazon Regression Test_LandingPage_Edge (2 classes)</span>
@@ -317,52 +409,60 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(12);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifySignInBtnTest')
 data.setCell(0, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(0, 3, 1437);
+data.setCell(0, 3, 960);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifySignInBtnTest')
+data.setCell(1, 1, 'verifyHelloSignInText')
 data.setCell(1, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(1, 3, 564);
+data.setCell(1, 3, 569);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyHelloSignInText')
 data.setCell(2, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(2, 3, 503);
+data.setCell(2, 3, 563);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'getLandingPageURLTest')
+data.setCell(3, 1, 'verifySignInBtnTest')
 data.setCell(3, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(3, 3, 361);
+data.setCell(3, 3, 549);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'getLandingPageTitleTest')
-data.setCell(4, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(4, 3, 359);
+data.setCell(4, 1, 'IsHomePageSearchIconEnablededTest')
+data.setCell(4, 2, 'com.qa.amazon.tests.HomePageTest')
+data.setCell(4, 3, 543);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'getLandingPageTitleTest')
 data.setCell(5, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(5, 3, 332);
+data.setCell(5, 3, 515);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyHelloSignInText')
-data.setCell(6, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(6, 3, 304);
+data.setCell(6, 1, 'IsHomePageSearchBoxEnablededTest')
+data.setCell(6, 2, 'com.qa.amazon.tests.HomePageTest')
+data.setCell(6, 3, 494);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'getLandingPageURLTest')
 data.setCell(7, 2, 'com.qa.amazon.tests.LandingPageTest')
-data.setCell(7, 3, 164);
+data.setCell(7, 3, 393);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'isSignInLogoDisplayedTest')
-data.setCell(8, 2, 'com.qa.amazon.tests.SignInPageTest')
-data.setCell(8, 3, 143);
+data.setCell(8, 1, 'getLandingPageTitleTest')
+data.setCell(8, 2, 'com.qa.amazon.tests.LandingPageTest')
+data.setCell(8, 3, 265);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'isSignInLogoDisplayedTest')
-data.setCell(9, 2, 'com.qa.amazon.tests.SignInPageTest')
-data.setCell(9, 3, 96);
+data.setCell(9, 1, 'getLandingPageURLTest')
+data.setCell(9, 2, 'com.qa.amazon.tests.LandingPageTest')
+data.setCell(9, 3, 241);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'isSignInLogoDisplayedTest')
+data.setCell(10, 2, 'com.qa.amazon.tests.SignInPageTest')
+data.setCell(10, 3, 205);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'isSignInLogoDisplayedTest')
+data.setCell(11, 2, 'com.qa.amazon.tests.SignInPageTest')
+data.setCell(11, 3, 0);
 window.suiteTableData['Amazon_Regression_Test_Suite']= { tableData: data, tableDiv: 'times-div-Amazon_Regression_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Amazon_Regression_Test_Suite">
               </div> <!-- times-div-Amazon_Regression_Test_Suite -->
             </div> <!-- times-div -->
@@ -395,128 +495,157 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">getLandingPageTitleTest</span>
-                <span class="method-start">14113 ms</span>
+                <span class="method-start">16481 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">14527 ms</span>
+                <span class="method-start">16797 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">15230 ms</span>
+                <span class="method-start">17886 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">getLandingPageURLTest</span>
-                <span class="method-start">23751 ms</span>
+                <span class="method-start">24095 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">24142 ms</span>
+                <span class="method-start">24473 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">24791 ms</span>
+                <span class="method-start">26979 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHelloSignInText</span>
-                <span class="method-start">42202 ms</span>
+                <span class="method-start">32244 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">42711 ms</span>
+                <span class="method-start">32817 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">43895 ms</span>
+                <span class="method-start">35264 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifySignInBtnTest</span>
-                <span class="method-start">60245 ms</span>
+                <span class="method-start">40669 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">60827 ms</span>
+                <span class="method-start">41228 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.amazon.tests.SignInPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">61398 ms</span>
+                <span class="method-start">41791 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">isSignInLogoDisplayedTest</span>
-                <span class="method-start">70752 ms</span>
+                <span class="method-start">46047 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">70903 ms</span>
+                <span class="method-start">46094 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.amazon.tests.HomePageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">46108 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">IsHomePageSearchBoxEnablededTest</span>
+                <span class="method-start">51072 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">51582 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup(chrome)</span>
+                <span class="method-start">53513 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">IsHomePageSearchIconEnablededTest</span>
+                <span class="method-start">59725 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">60285 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.amazon.tests.LandingPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(edge)</span>
-                <span class="method-start">72828 ms</span>
+                <span class="method-start">63177 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">getLandingPageTitleTest</span>
-                <span class="method-start">83057 ms</span>
+                <span class="method-start">83826 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">83415 ms</span>
+                <span class="method-start">84350 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(edge)</span>
-                <span class="method-start">85441 ms</span>
+                <span class="method-start">86212 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">getLandingPageURLTest</span>
-                <span class="method-start">93850 ms</span>
+                <span class="method-start">94867 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">94024 ms</span>
+                <span class="method-start">95287 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(edge)</span>
-                <span class="method-start">95935 ms</span>
+                <span class="method-start">98835 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyHelloSignInText</span>
-                <span class="method-start">102461 ms</span>
+                <span class="method-start">105973 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">102773 ms</span>
+                <span class="method-start">106554 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup(edge)</span>
-                <span class="method-start">104734 ms</span>
+                <span class="method-start">108364 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifySignInBtnTest</span>
-                <span class="method-start">110353 ms</span>
+                <span class="method-start">115710 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">111799 ms</span>
+                <span class="method-start">116682 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.amazon.tests.SignInPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup(edge)</span>
-                <span class="method-start">113696 ms</span>
+                <span class="method-start">120298 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">isSignInLogoDisplayedTest</span>
-                <span class="method-start">141999 ms</span>
+                <span class="method-start">127122 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">142100 ms</span>
+                <span class="method-start">127334 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
