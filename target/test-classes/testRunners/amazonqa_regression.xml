@@ -11,7 +11,7 @@
 
 
 
-<test name="Amazon Regression Test_LandingPage_Chrome">
+<test name="Amazon Regression Test_Chrome">
 
      <parameter name="browser" value="chrome">
      </parameter>
@@ -28,7 +28,7 @@
 	
 	
 	
-  <test name="Amazon Regression Test_LandingPage_Edge">
+  <test name="Amazon Regression Test_Edge">
 
      <parameter name="browser" value="edge">
      </parameter>
