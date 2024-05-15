@@ -37,6 +37,7 @@
 		<classes>
 			<class name="com.qa.amazon.tests.LandingPageTest" />
 			<class name="com.qa.amazon.tests.SignInPageTest" />
+			<class name="com.qa.amazon.tests.HomePageTest" />
         </classes>
    </test> 
 
