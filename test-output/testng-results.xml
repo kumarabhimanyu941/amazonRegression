@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="11" failed="0" skipped="1">
+<testng-results ignored="0" total="14" passed="13" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-14T12:10:34 IST" name="Amazon Regression Test Suite" finished-at="2024-05-14T12:12:43 IST" duration-ms="129233">
+  <suite started-at="2024-05-15T08:45:25 IST" name="Amazon Regression Test Suite" finished-at="2024-05-15T08:47:26 IST" duration-ms="120684">
     <groups>
     </groups>
-    <test started-at="2024-05-14T12:10:34 IST" name="Amazon Regression Test_LandingPage_Chrome" finished-at="2024-05-14T12:11:35 IST" duration-ms="61568">
+    <test started-at="2024-05-15T08:45:25 IST" name="Amazon Regression Test_Chrome" finished-at="2024-05-15T08:46:15 IST" duration-ms="50573">
       <class name="com.qa.amazon.tests.HomePageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.HomePageTest@65fe2691]" started-at="2024-05-14T12:11:20 IST" name="setup" finished-at="2024-05-14T12:11:25 IST" duration-ms="4957" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.HomePageTest@6c806c8b]" started-at="2024-05-15T08:46:04 IST" name="setup" finished-at="2024-05-15T08:46:09 IST" duration-ms="4567" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,86 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="IsHomePageSearchBoxEnablededTest()[pri:0, instance:com.qa.amazon.tests.HomePageTest@65fe2691]" started-at="2024-05-14T12:11:25 IST" name="IsHomePageSearchBoxEnablededTest" finished-at="2024-05-14T12:11:25 IST" duration-ms="494" status="PASS">
+        <test-method signature="IsHomePageSearchBoxEnablededTest()[pri:0, instance:com.qa.amazon.tests.HomePageTest@6c806c8b]" started-at="2024-05-15T08:46:09 IST" name="IsHomePageSearchBoxEnablededTest" finished-at="2024-05-15T08:46:09 IST" duration-ms="114" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='twotabsearchtextbox']"}
+  (Session info: chrome=124.0.6367.207)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f78471bf8eb805979c41cdc693b605e5, findElement {value=//input[@id='twotabsearchtextbox'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.207, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\KUMAR~1.ABH\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59242}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59242/devtoo..., se:cdpVersion: 124.0.6367.207, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f78471bf8eb805979c41cdc693b605e5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@id='twotabsearchtextbox']"}
+  (Session info: chrome=124.0.6367.207)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.21'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f78471bf8eb805979c41cdc693b605e5, findElement {value=//input[@id='twotabsearchtextbox'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.207, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\KUMAR~1.ABH\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59242}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59242/devtoo..., se:cdpVersion: 124.0.6367.207, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f78471bf8eb805979c41cdc693b605e5
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at com.qa.amazon.utils.ElementActions.checkIsElementEnabled(ElementActions.java:152)
+at com.qa.amazon.pages.HomePage.isHomePageSearchBoxEnabled(HomePage.java:47)
+at com.qa.amazon.tests.HomePageTest.IsHomePageSearchBoxEnablededTest(HomePageTest.java:36)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IsHomePageSearchBoxEnablededTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.HomePageTest@65fe2691]" started-at="2024-05-14T12:11:25 IST" name="teardown" finished-at="2024-05-14T12:11:27 IST" duration-ms="1926" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.HomePageTest@6c806c8b]" started-at="2024-05-15T08:46:09 IST" name="teardown" finished-at="2024-05-15T08:46:09 IST" duration-ms="546" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.HomePageTest@65fe2691]" started-at="2024-05-14T12:11:27 IST" name="setup" finished-at="2024-05-14T12:11:33 IST" duration-ms="6193" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.HomePageTest@6c806c8b]" started-at="2024-05-15T08:46:09 IST" name="setup" finished-at="2024-05-15T08:46:14 IST" duration-ms="5116" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,17 +108,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="IsHomePageSearchIconEnablededTest()[pri:0, instance:com.qa.amazon.tests.HomePageTest@65fe2691]" started-at="2024-05-14T12:11:33 IST" name="IsHomePageSearchIconEnablededTest" finished-at="2024-05-14T12:11:34 IST" duration-ms="543" status="PASS">
+        <test-method signature="IsHomePageSearchIconEnablededTest()[pri:0, instance:com.qa.amazon.tests.HomePageTest@6c806c8b]" started-at="2024-05-15T08:46:14 IST" name="IsHomePageSearchIconEnablededTest" finished-at="2024-05-15T08:46:15 IST" duration-ms="382" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- IsHomePageSearchIconEnablededTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.HomePageTest@65fe2691]" started-at="2024-05-14T12:11:34 IST" name="teardown" finished-at="2024-05-14T12:11:35 IST" duration-ms="1101" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.HomePageTest@6c806c8b]" started-at="2024-05-15T08:46:15 IST" name="teardown" finished-at="2024-05-15T08:46:15 IST" duration-ms="574" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.amazon.tests.HomePageTest -->
       <class name="com.qa.amazon.tests.SignInPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.SignInPageTest@45adc393]" started-at="2024-05-14T12:11:16 IST" name="setup" finished-at="2024-05-14T12:11:20 IST" duration-ms="4161" status="FAIL">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.SignInPageTest@9d3c67]" started-at="2024-05-15T08:45:57 IST" name="setup" finished-at="2024-05-15T08:46:03 IST" duration-ms="6221" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,116 +126,20 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Element must be set]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Element must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-at org.openqa.selenium.interactions.PointerInput$Origin.fromElement(PointerInput.java:277)
-at org.openqa.selenium.interactions.Actions.moveInTicks(Actions.java:345)
-at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:324)
-at com.qa.amazon.utils.ElementActions.hoverOverElement(ElementActions.java:143)
-at com.qa.amazon.pages.LandingPage.clickOnSignInBtn(LandingPage.java:85)
-at com.qa.amazon.tests.SignInPageTest.setup(SignInPageTest.java:37)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="isSignInLogoDisplayedTest()[pri:0, instance:com.qa.amazon.tests.SignInPageTest@45adc393]" started-at="2024-05-14T12:11:20 IST" name="isSignInLogoDisplayedTest" finished-at="2024-05-14T12:11:20 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Element must be set]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Element must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
-at org.openqa.selenium.interactions.PointerInput$Origin.fromElement(PointerInput.java:277)
-at org.openqa.selenium.interactions.Actions.moveInTicks(Actions.java:345)
-at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:324)
-at com.qa.amazon.utils.ElementActions.hoverOverElement(ElementActions.java:143)
-at com.qa.amazon.pages.LandingPage.clickOnSignInBtn(LandingPage.java:85)
-at com.qa.amazon.tests.SignInPageTest.setup(SignInPageTest.java:37)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="isSignInLogoDisplayedTest()[pri:0, instance:com.qa.amazon.tests.SignInPageTest@9d3c67]" started-at="2024-05-15T08:46:03 IST" name="isSignInLogoDisplayedTest" finished-at="2024-05-15T08:46:03 IST" duration-ms="150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSignInLogoDisplayedTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.SignInPageTest@45adc393]" started-at="2024-05-14T12:11:20 IST" name="teardown" finished-at="2024-05-14T12:11:20 IST" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.SignInPageTest@9d3c67]" started-at="2024-05-15T08:46:03 IST" name="teardown" finished-at="2024-05-15T08:46:04 IST" duration-ms="603" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.amazon.tests.SignInPageTest -->
       <class name="com.qa.amazon.tests.LandingPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:10:34 IST" name="setup" finished-at="2024-05-14T12:10:50 IST" duration-ms="16058" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:25 IST" name="setup" finished-at="2024-05-15T08:45:32 IST" duration-ms="7231" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -175,15 +150,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getLandingPageTitleTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:10:50 IST" name="getLandingPageTitleTest" finished-at="2024-05-14T12:10:50 IST" duration-ms="265" status="PASS">
+        <test-method signature="getLandingPageTitleTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:33 IST" name="getLandingPageTitleTest" finished-at="2024-05-15T08:45:33 IST" duration-ms="230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLandingPageTitleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:10:51 IST" name="teardown" finished-at="2024-05-14T12:10:52 IST" duration-ms="1078" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:33 IST" name="teardown" finished-at="2024-05-15T08:45:37 IST" duration-ms="3741" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:10:52 IST" name="setup" finished-at="2024-05-14T12:10:58 IST" duration-ms="6201" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:37 IST" name="setup" finished-at="2024-05-15T08:45:42 IST" duration-ms="4948" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -194,15 +169,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getLandingPageURLTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:10:58 IST" name="getLandingPageURLTest" finished-at="2024-05-14T12:10:58 IST" duration-ms="241" status="PASS">
+        <test-method signature="getLandingPageURLTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:42 IST" name="getLandingPageURLTest" finished-at="2024-05-15T08:45:42 IST" duration-ms="246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLandingPageURLTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:10:58 IST" name="teardown" finished-at="2024-05-14T12:11:01 IST" duration-ms="2500" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:42 IST" name="teardown" finished-at="2024-05-15T08:45:43 IST" duration-ms="645" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:11:01 IST" name="setup" finished-at="2024-05-14T12:11:06 IST" duration-ms="5250" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:43 IST" name="setup" finished-at="2024-05-15T08:45:47 IST" duration-ms="4606" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -213,15 +188,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHelloSignInText()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:11:06 IST" name="verifyHelloSignInText" finished-at="2024-05-14T12:11:07 IST" duration-ms="563" status="PASS">
+        <test-method signature="verifyHelloSignInText()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:47 IST" name="verifyHelloSignInText" finished-at="2024-05-15T08:45:48 IST" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHelloSignInText -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:11:07 IST" name="teardown" finished-at="2024-05-14T12:11:09 IST" duration-ms="2443" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:48 IST" name="teardown" finished-at="2024-05-15T08:45:48 IST" duration-ms="753" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:11:09 IST" name="setup" finished-at="2024-05-14T12:11:14 IST" duration-ms="5334" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:48 IST" name="setup" finished-at="2024-05-15T08:45:53 IST" duration-ms="5090" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -232,19 +207,59 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySignInBtnTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:11:14 IST" name="verifySignInBtnTest" finished-at="2024-05-14T12:11:15 IST" duration-ms="549" status="PASS">
+        <test-method signature="verifySignInBtnTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:53 IST" name="verifySignInBtnTest" finished-at="2024-05-15T08:45:54 IST" duration-ms="681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignInBtnTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@4b960b5b]" started-at="2024-05-14T12:11:15 IST" name="teardown" finished-at="2024-05-14T12:11:16 IST" duration-ms="558" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@10acd6]" started-at="2024-05-15T08:45:54 IST" name="teardown" finished-at="2024-05-15T08:45:57 IST" duration-ms="2901" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.amazon.tests.LandingPageTest -->
-    </test> <!-- Amazon Regression Test_LandingPage_Chrome -->
-    <test started-at="2024-05-14T12:11:37 IST" name="Amazon Regression Test_LandingPage_Edge" finished-at="2024-05-14T12:12:43 IST" duration-ms="65887">
+    </test> <!-- Amazon Regression Test_Chrome -->
+    <test started-at="2024-05-15T08:46:16 IST" name="Amazon Regression Test_Edge" finished-at="2024-05-15T08:47:26 IST" duration-ms="69864">
+      <class name="com.qa.amazon.tests.HomePageTest">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.HomePageTest@65753040]" started-at="2024-05-15T08:47:07 IST" name="setup" finished-at="2024-05-15T08:47:14 IST" duration-ms="6821" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="IsHomePageSearchBoxEnablededTest()[pri:0, instance:com.qa.amazon.tests.HomePageTest@65753040]" started-at="2024-05-15T08:47:14 IST" name="IsHomePageSearchBoxEnablededTest" finished-at="2024-05-15T08:47:14 IST" duration-ms="426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IsHomePageSearchBoxEnablededTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.HomePageTest@65753040]" started-at="2024-05-15T08:47:14 IST" name="teardown" finished-at="2024-05-15T08:47:16 IST" duration-ms="2159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.HomePageTest@65753040]" started-at="2024-05-15T08:47:16 IST" name="setup" finished-at="2024-05-15T08:47:23 IST" duration-ms="6920" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="IsHomePageSearchIconEnablededTest()[pri:0, instance:com.qa.amazon.tests.HomePageTest@65753040]" started-at="2024-05-15T08:47:23 IST" name="IsHomePageSearchIconEnablededTest" finished-at="2024-05-15T08:47:24 IST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IsHomePageSearchIconEnablededTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.HomePageTest@65753040]" started-at="2024-05-15T08:47:24 IST" name="teardown" finished-at="2024-05-15T08:47:26 IST" duration-ms="2040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.qa.amazon.tests.HomePageTest -->
       <class name="com.qa.amazon.tests.SignInPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.SignInPageTest@7e351d7]" started-at="2024-05-14T12:12:34 IST" name="setup" finished-at="2024-05-14T12:12:41 IST" duration-ms="6818" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.SignInPageTest@5fbdc49b]" started-at="2024-05-15T08:46:56 IST" name="setup" finished-at="2024-05-15T08:47:05 IST" duration-ms="8846" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -255,17 +270,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="isSignInLogoDisplayedTest()[pri:0, instance:com.qa.amazon.tests.SignInPageTest@7e351d7]" started-at="2024-05-14T12:12:41 IST" name="isSignInLogoDisplayedTest" finished-at="2024-05-14T12:12:41 IST" duration-ms="205" status="PASS">
+        <test-method signature="isSignInLogoDisplayedTest()[pri:0, instance:com.qa.amazon.tests.SignInPageTest@5fbdc49b]" started-at="2024-05-15T08:47:05 IST" name="isSignInLogoDisplayedTest" finished-at="2024-05-15T08:47:05 IST" duration-ms="121" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isSignInLogoDisplayedTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.SignInPageTest@7e351d7]" started-at="2024-05-14T12:12:41 IST" name="teardown" finished-at="2024-05-14T12:12:43 IST" duration-ms="1718" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.SignInPageTest@5fbdc49b]" started-at="2024-05-15T08:47:05 IST" name="teardown" finished-at="2024-05-15T08:47:07 IST" duration-ms="2048" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.amazon.tests.SignInPageTest -->
       <class name="com.qa.amazon.tests.LandingPageTest">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:11:37 IST" name="setup" finished-at="2024-05-14T12:11:58 IST" duration-ms="20642" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:16 IST" name="setup" finished-at="2024-05-15T08:46:26 IST" duration-ms="10636" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -276,15 +291,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getLandingPageTitleTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:11:58 IST" name="getLandingPageTitleTest" finished-at="2024-05-14T12:11:58 IST" duration-ms="515" status="PASS">
+        <test-method signature="getLandingPageTitleTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:26 IST" name="getLandingPageTitleTest" finished-at="2024-05-15T08:46:27 IST" duration-ms="172" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLandingPageTitleTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:11:58 IST" name="teardown" finished-at="2024-05-14T12:12:00 IST" duration-ms="1806" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:27 IST" name="teardown" finished-at="2024-05-15T08:46:29 IST" duration-ms="2115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:00 IST" name="setup" finished-at="2024-05-14T12:12:09 IST" duration-ms="8647" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:29 IST" name="setup" finished-at="2024-05-15T08:46:34 IST" duration-ms="5488" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -295,15 +310,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getLandingPageURLTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:09 IST" name="getLandingPageURLTest" finished-at="2024-05-14T12:12:09 IST" duration-ms="393" status="PASS">
+        <test-method signature="getLandingPageURLTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:34 IST" name="getLandingPageURLTest" finished-at="2024-05-15T08:46:34 IST" duration-ms="170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getLandingPageURLTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:09 IST" name="teardown" finished-at="2024-05-14T12:12:13 IST" duration-ms="3545" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:34 IST" name="teardown" finished-at="2024-05-15T08:46:37 IST" duration-ms="2932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:13 IST" name="setup" finished-at="2024-05-14T12:12:20 IST" duration-ms="7134" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:37 IST" name="setup" finished-at="2024-05-15T08:46:43 IST" duration-ms="5921" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -314,15 +329,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyHelloSignInText()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:20 IST" name="verifyHelloSignInText" finished-at="2024-05-14T12:12:20 IST" duration-ms="569" status="PASS">
+        <test-method signature="verifyHelloSignInText()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:43 IST" name="verifyHelloSignInText" finished-at="2024-05-15T08:46:44 IST" duration-ms="383" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHelloSignInText -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:20 IST" name="teardown" finished-at="2024-05-14T12:12:22 IST" duration-ms="1806" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:44 IST" name="teardown" finished-at="2024-05-15T08:46:46 IST" duration-ms="1987" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:22 IST" name="setup" finished-at="2024-05-14T12:12:29 IST" duration-ms="7339" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:46 IST" name="setup" finished-at="2024-05-15T08:46:52 IST" duration-ms="6169" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -333,15 +348,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySignInBtnTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:29 IST" name="verifySignInBtnTest" finished-at="2024-05-14T12:12:30 IST" duration-ms="960" status="PASS">
+        <test-method signature="verifySignInBtnTest()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:52 IST" name="verifySignInBtnTest" finished-at="2024-05-15T08:46:53 IST" duration-ms="631" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySignInBtnTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@2db1b657]" started-at="2024-05-14T12:12:30 IST" name="teardown" finished-at="2024-05-14T12:12:34 IST" duration-ms="3612" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.amazon.tests.LandingPageTest@6ef1a1b9]" started-at="2024-05-15T08:46:53 IST" name="teardown" finished-at="2024-05-15T08:46:56 IST" duration-ms="3335" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.qa.amazon.tests.LandingPageTest -->
-    </test> <!-- Amazon Regression Test_LandingPage_Edge -->
+    </test> <!-- Amazon Regression Test_Edge -->
   </suite> <!-- Amazon Regression Test Suite -->
 </testng-results>

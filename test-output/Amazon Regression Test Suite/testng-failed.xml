@@ -2,19 +2,18 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Amazon Regression Test Suite]" guice-stage="DEVELOPMENT" verbose="3">
   <listeners>
-    <listener class-name="com.qa.amazon.listeners.ExtentReportListener"/>
     <listener class-name="com.qa.amazon.listeners.AllureReportListener"/>
   </listeners>
-  <test thread-count="5" name="Amazon Regression Test_LandingPage_Chrome(failed)" verbose="3">
+  <test thread-count="5" name="Amazon Regression Test_Chrome(failed)" verbose="3">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.amazon.tests.SignInPageTest">
+      <class name="com.qa.amazon.tests.HomePageTest">
         <methods>
-          <include name="isSignInLogoDisplayedTest"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="IsHomePageSearchBoxEnablededTest"/>
         </methods>
-      </class> <!-- com.qa.amazon.tests.SignInPageTest -->
+      </class> <!-- com.qa.amazon.tests.HomePageTest -->
     </classes>
-  </test> <!-- Amazon Regression Test_LandingPage_Chrome(failed) -->
+  </test> <!-- Amazon Regression Test_Chrome(failed) -->
 </suite> <!-- Failed suite [Amazon Regression Test Suite] -->

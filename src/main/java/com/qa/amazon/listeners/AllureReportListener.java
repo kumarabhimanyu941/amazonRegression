@@ -13,6 +13,9 @@ import com.qa.amazon.base.Base;
 
 
 public class AllureReportListener extends Base implements ITestListener {
+	
+	public WebDriver driver;
+	
 
 	private static String getTestMethodName(ITestResult iTestResult) {
 		return iTestResult.getMethod().getConstructorOrMethod().getName();
@@ -57,11 +60,11 @@ public class AllureReportListener extends Base implements ITestListener {
 		System.out.println("I am in onTestSuccess method " + getTestMethodName(iTestResult) + " succeed");
 	}
 
-	@Override
-	public void onTestFailure(ITestResult iTestResult) {
+	/**@Override
+	public void onTestFailure(ITestResult iTestResult,WebDriver driver) {
 		System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
 		Object testClass = iTestResult.getInstance();
-		//WebDriver driver = BasePage.getDriver();
+		
 		// Allure ScreenShotRobot and SaveTestLog
           //getScreenshot();
 		  System.out.println("Screenshot captured for test case:" + getTestMethodName(iTestResult));
@@ -71,7 +74,7 @@ public class AllureReportListener extends Base implements ITestListener {
 		// Save a log on allure.
 		saveTextLog(getTestMethodName(iTestResult) + " failed and screenshot taken!");		
 	}
-
+**/
 	@Override
 	public void onTestSkipped(ITestResult iTestResult) {
 		System.out.println("I am in onTestSkipped method " + getTestMethodName(iTestResult) + " skipped");
