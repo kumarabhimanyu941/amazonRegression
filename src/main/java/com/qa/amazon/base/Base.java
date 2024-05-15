@@ -108,7 +108,7 @@ public class Base {
 		return driver;
 	}
 	
-	public String getScreenshot() {
+	public String getScreenshot(WebDriver driver) {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
 		File destination = new File(path);

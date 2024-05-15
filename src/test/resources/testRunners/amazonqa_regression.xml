@@ -4,7 +4,7 @@
 <suite name="Amazon Regression Test Suite" thread-count="5"  verbose ="3">
 
 <listeners>
-<listener class-name="com.qa.amazon.listeners.ExtentReportListener"></listener>
+
 <listener class-name="com.qa.amazon.listeners.AllureReportListener"></listener>
 
 </listeners>
