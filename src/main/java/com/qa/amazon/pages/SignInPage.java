@@ -13,7 +13,7 @@ public class SignInPage {
 	public SignInPage signinpage;
 
 	//SignIn Page Locators
-	By SignInLogo = By.xpath("//h1[@class='a-spacing-smal']");
+	By SignInLogo = By.xpath("//h1[@class='a-spacing-small']");
 	
 	//SignIn Page Constructor
 	public SignInPage(WebDriver driver) {
