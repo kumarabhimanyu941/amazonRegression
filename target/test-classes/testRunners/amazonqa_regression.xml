@@ -1,44 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Amazon Regression Test Suite" thread-count="5"  verbose ="3">
+<suite name="Amazon Regression Test Suite" thread-count="5" verbose="3">
 
-<listeners>
+	<listeners>
 
-<listener class-name="com.qa.amazon.listeners.AllureReportListener"></listener>
+		<listener class-name="com.qa.amazon.listeners.AllureReportListener"></listener>
 
-</listeners>
+	</listeners>
 
 
+	<test name="Amazon Regression Test_Chrome">
 
-<test name="Amazon Regression Test_Chrome">
+		<parameter name="browser" value="chrome"></parameter>
 
-     <parameter name="browser" value="chrome">
-     </parameter>
-     
-    	
-		<classes>
-			<class name="com.qa.amazon.tests.LandingPageTest"/>
-			<class name="com.qa.amazon.tests.SignInPageTest" />
-			<class name="com.qa.amazon.tests.HomePageTest" />
-        </classes>
-	</test>
-	
-	
-	
-	
-	
-  <test name="Amazon Regression Test_Edge">
 
-     <parameter name="browser" value="edge">
-     </parameter>
-     
-    	
 		<classes>
 			<class name="com.qa.amazon.tests.LandingPageTest" />
 			<class name="com.qa.amazon.tests.SignInPageTest" />
 			<class name="com.qa.amazon.tests.HomePageTest" />
-        </classes>
-   </test> 
+		</classes>
+	</test>
+
+
+	<test name="Amazon Regression Test_Edge">
+
+		<parameter name="browser" value="edge"></parameter>
+
+
+		<classes>
+			<class name="com.qa.amazon.tests.LandingPageTest" />
+			<class name="com.qa.amazon.tests.SignInPageTest" />
+			<class name="com.qa.amazon.tests.HomePageTest" />
+		</classes>
+	</test>
 
 </suite> 

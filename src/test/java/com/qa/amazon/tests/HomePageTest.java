@@ -37,11 +37,21 @@ public class HomePageTest {
 	
 	}
 	
-	@Test
+	@Test 
 	public void IsHomePageSearchIconEnablededTest() {
 	Assert.assertTrue(homepage.isHomePageSearchIconEnabled());	
 	
 	}
+	
+	
+	@Test
+	public void Is_ConditionsOfUseAndSaleLink_Enabled_Test() {
+		Assert.assertTrue(homepage.isConditionsForUseAndSaleLinkEnabled());
+		
+	}
+	
+	
+	
 	
 	@AfterMethod
 	public void teardown() {
