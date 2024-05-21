@@ -2,6 +2,8 @@ package com.qa.amazon.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import com.qa.amazon.utils.ElementActions;
 import com.qa.amazon.utils.JavaScriptUtil;
 
@@ -24,6 +26,7 @@ public class HomePage {
 	public HomePage(WebDriver driver) {
 		this.driver=driver;
 		elementactions=new ElementActions(driver);
+		javascriptutil = new JavaScriptUtil(driver);
 		
 		
 	}
@@ -63,8 +66,9 @@ public class HomePage {
 	 * @param locator
 	 * @return true or false based on whether the conditionsForUseAndSaleLink is enabled or not
 	 */
-	public boolean isConditionsForUseAndSaleLinkEnabled(By locator) {
-	javascriptutil.scrollIntoView(elementactions.getElement(conditionsForUseAndSaleLink));
+	public boolean isConditionsForUseAndSaleLinkEnabled() {
+	WebElement ConditionsForUseAndSaleLink =elementactions.getElement(conditionsForUseAndSaleLink);
+	javascriptutil.scrollIntoView(ConditionsForUseAndSaleLink);
 		return elementactions.checkIsElementEnabled(conditionsForUseAndSaleLink);
 	}
 	
