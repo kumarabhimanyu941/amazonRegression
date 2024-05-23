@@ -26,7 +26,7 @@ public class SignInPageTest {
 	public LandingPage landingpage;
 	public SignInPage signinpage;
 	
-	@BeforeMethod
+	@BeforeTest
 	@Parameters("browser")
 	public void setup(String browser) {
 		prop=new Properties();
@@ -43,7 +43,7 @@ public class SignInPageTest {
 		Assert.assertTrue(signinpage.isSignInLogoDisplayed());
 	}
 	
-	@AfterMethod
+	@AfterTest
 	public void teardown() {
 	driver.quit();
 		
