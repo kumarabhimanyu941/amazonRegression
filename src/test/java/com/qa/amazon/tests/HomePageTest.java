@@ -5,7 +5,9 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -20,7 +22,7 @@ public class HomePageTest {
     public HomePage homepage;
     
 	
-	@BeforeMethod
+	@BeforeTest
 	@Parameters("browser")
 	public void setup(String browser) {
 		base = new Base();
@@ -53,7 +55,7 @@ public class HomePageTest {
 	
 	
 	
-	@AfterMethod
+	@AfterTest
 	public void teardown() {
 		driver.quit();
 	}

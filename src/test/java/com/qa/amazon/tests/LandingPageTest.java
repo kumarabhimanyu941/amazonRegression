@@ -26,7 +26,7 @@ public class LandingPageTest {
 	public WebDriver driver;
 	
 	
-	@BeforeMethod
+	@BeforeTest
 	@Parameters("browser")
 	public void setup(String browser) {
 		base=new Base();
@@ -64,7 +64,7 @@ public class LandingPageTest {
 		Assert.assertEquals(helloSignInIconText, AppConstants.HELLO_SIGNINICON_TEXT);
 	}
 	
-	@AfterMethod
+	@AfterTest
 	public void teardown() {
 		driver.quit();
 	}
