@@ -13,7 +13,7 @@ public class HomePage {
 	public WebDriver driver;
 	public ElementActions elementactions;
 	public JavaScriptUtil javascriptutil;
-	
+	public SearchPage searchpage;
 	//HomePage locators
 	
 	By homePageSearchBox= By.xpath("//input[@id='twotabsearchtextbox']");
@@ -79,7 +79,15 @@ public class HomePage {
 	public void scrollToTopOfHomePage() {
 		javascriptutil.scrollIntoView(elementactions.getElement(homePageSearchBox));
 	}
-	
-	
+
+	/**
+	 * This method will perform search for the given search value on the Home Page  
+	 * @param searchValue
+	 */
+	public SearchPage performSearchOnHomePage(String searchValue) {
+		elementactions.doSendKeys(homePageSearchBox, searchValue);
+		elementactions.doClick(homePageSearchIcon);
+		return searchpage;
+	}
 	
 }
