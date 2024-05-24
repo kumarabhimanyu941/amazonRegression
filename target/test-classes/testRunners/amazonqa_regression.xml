@@ -19,6 +19,7 @@
 			<class name="com.qa.amazon.tests.LandingPageTest" />
 			<class name="com.qa.amazon.tests.SignInPageTest" />
 			<class name="com.qa.amazon.tests.HomePageTest" />
+			<class name="com.qa.amazon.tests.SearchPageTest" />
 		</classes>
 	</test>
 
@@ -32,6 +33,7 @@
 			<class name="com.qa.amazon.tests.LandingPageTest" />
 			<class name="com.qa.amazon.tests.SignInPageTest" />
 			<class name="com.qa.amazon.tests.HomePageTest" />
+			<class name="com.qa.amazon.tests.SearchPageTest" />
 		</classes>
 	</test>
 
