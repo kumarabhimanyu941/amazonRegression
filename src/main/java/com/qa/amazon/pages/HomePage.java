@@ -27,6 +27,7 @@ public class HomePage {
 		this.driver=driver;
 		elementactions=new ElementActions(driver);
 		javascriptutil = new JavaScriptUtil(driver);
+		searchpage=new SearchPage(driver);
 		
 		
 	}
