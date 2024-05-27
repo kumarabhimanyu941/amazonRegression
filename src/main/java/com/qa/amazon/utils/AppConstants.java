@@ -12,5 +12,6 @@ public class AppConstants {
 	public static String HELLO_SIGNINICON_TEXT="Hello, sign in";
 	public static String HOMEPAGE_TITLE="Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
 	public static final String HOMEPAGE_SEARCH_VALUE="TV";
+	public static final String SEARCH_PAGE_URL_CONTENT="="+HOMEPAGE_SEARCH_VALUE;
 	
 }

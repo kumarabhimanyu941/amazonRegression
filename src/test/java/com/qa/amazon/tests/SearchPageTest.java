@@ -40,6 +40,14 @@ public class SearchPageTest {
 
 	}
 
+	
+	@Test
+	public void verifySearchPageURLTest() {
+		Assert.assertTrue(searchpage.getSearchPageURL().contains(AppConstants.SEARCH_PAGE_URL_CONTENT));
+	}
+	
+	
+	
 	@AfterTest
 	public void teardown() {
 		driver.quit();
