@@ -30,4 +30,14 @@ public class SearchPage {
 		return elementactions.IsElementDisplayed(searchpageresultmsg);
 	}
 
+	
+	/**
+	 * This method will fetch the Search Page URL
+	 * @return Search Page URL
+	 */
+	public String getSearchPageURL() {
+		return elementactions.getCurrentPageURL();
+
+	}
+
 }
