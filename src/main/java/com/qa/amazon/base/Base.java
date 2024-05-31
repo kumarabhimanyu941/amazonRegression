@@ -38,35 +38,32 @@ public class Base {
 			}
 		}
 
-		else {
+		else if (envName.toLowerCase().trim() == "qa") {
 
-			switch (envName.toLowerCase().trim()) {
-			case "qa":
-				try {
-					fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
-				} catch (FileNotFoundException e) {
-
-					e.printStackTrace();
-				}
+			try {
+				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
 				System.out.println("Running test cases on QA environment");
-				break;
+			} catch (FileNotFoundException e) {
 
-			case "stage":
-				try {
-					fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/stage.config.properties");
-				} catch (FileNotFoundException e) {
-
-					e.printStackTrace();
-				}
-				System.out.println("Running test cases on stage environment");
-				break;
-
-			default:
-				System.out.println("Please pass correct environment");
-
+				e.printStackTrace();
 			}
 
 		}
+
+		else if (envName.toLowerCase().trim() == "stage") {
+
+			try {
+				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/stage.config.properties");
+				System.out.println("Running test cases on stage environment");
+			} catch (FileNotFoundException e) {
+
+				e.printStackTrace();
+			}
+		} else {
+
+			System.out.println("Please pass correct environment name");
+		}
+
 		try {
 			prop.load(fis);
 		} catch (IOException e) {
