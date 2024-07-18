@@ -26,7 +26,7 @@ public class Base {
 	public Properties init_prop() {
 		prop = new Properties();
 		String envName = System.getProperty("env");
-
+		System.out.println("Passed Environment name is: " + envName);
 		if (envName == null) {
 
 			try {
