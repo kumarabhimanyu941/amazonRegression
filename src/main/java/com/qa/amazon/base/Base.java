@@ -22,10 +22,11 @@ public class Base {
 	public Properties prop;
 	public String url;
 	public FileInputStream fis;
+	public String envName;
 
 	public Properties init_prop() {
 		prop = new Properties();
-		String envName = System.getProperty("env");
+		envName = System.getProperty("env");
 		System.out.println("Passed Environment name is: " + envName);
 		if (envName == null) {
 
