@@ -34,7 +34,7 @@ public class Base {
 		case "qa":
 			try {
 				FileInputStream fis = new FileInputStream(
-						"../src/main/java/com/qa/amazon/configuration/qa.config.properties");
+						"./src/main/java/com/qa/amazon/configuration/qa.config.properties");
 
 			} catch (Exception e) {
 
@@ -44,7 +44,7 @@ public class Base {
 		case "stage":
 			try {
 				FileInputStream fis = new FileInputStream(
-						"../src/main/java/com/qa/amazon/configuration/stage.config.properties");
+						"./src/main/java/com/qa/amazon/configuration/stage.config.properties");
 
 			} catch (Exception e) {
 
