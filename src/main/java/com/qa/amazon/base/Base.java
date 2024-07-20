@@ -25,44 +25,35 @@ public class Base {
 	public String envName;
 
 	public Properties init_prop() {
+
 		prop = new Properties();
 		envName = System.getProperty("env");
 		System.out.println("Passed Environment name is: " + envName);
-		if (envName == null) {
 
+		switch (envName.toLowerCase()) {
+		case "qa":
 			try {
-				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
-				System.out.println("Running test cases on QA since no environment is passed");
-			} catch (FileNotFoundException e) {
+				FileInputStream fis = new FileInputStream(
+						"../src/main/java/com/qa/amazon/configuration/qa.config.properties");
 
-				e.printStackTrace();
-			}
-		}
-
-		else if (envName.toLowerCase().trim() == "qa") {
-
-			try {
-				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
-				System.out.println("Running test cases on QA environment");
-			} catch (FileNotFoundException e) {
+			} catch (Exception e) {
 
 				e.printStackTrace();
 			}
 
-		}
-
-		else if (envName.toLowerCase().trim() == "stage") {
-
+		case "stage":
 			try {
-				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/stage.config.properties");
-				System.out.println("Running test cases on stage environment");
-			} catch (FileNotFoundException e) {
+				FileInputStream fis = new FileInputStream(
+						"../src/main/java/com/qa/amazon/configuration/stage.config.properties");
+
+			} catch (Exception e) {
 
 				e.printStackTrace();
 			}
-		} else {
 
-			System.out.println("Please pass correct environment name");
+		default:
+			System.out.println("Pass correct environment name");
+			break;
 		}
 
 		try {
@@ -78,6 +69,7 @@ public class Base {
 
 		// browserName=prop.getProperty("browser");
 		System.out.println("Running the test cases on " + browserName);
+
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
