@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import CustomFrameworkException.FrameworkException;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
@@ -30,35 +31,29 @@ public class Base {
 		envName = System.getProperty("env");
 		System.out.println("Passed Environment name is: " + envName);
 
-		switch (envName.toLowerCase()) {
-		case "qa":
-			try {
-				FileInputStream fis = new FileInputStream(
-						"./src/main/java/com/qa/amazon/configuration/qa.config.properties");
-
-			} catch (Exception e) {
-
-				e.printStackTrace();
-			}
-
-		case "stage":
-			try {
-				FileInputStream fis = new FileInputStream(
-						"./src/main/java/com/qa/amazon/configuration/stage.config.properties");
-
-			} catch (Exception e) {
-
-				e.printStackTrace();
-			}
-
-		default:
-			System.out.println("Pass correct environment name");
-			break;
-		}
-
 		try {
+			switch (envName.toLowerCase().trim()) {
+			case "qa":
+
+				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
+
+				break;
+
+			case "stage":
+				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/stage.config.properties");
+
+				break;
+
+			default:
+
+				throw new FrameworkException("Please pass correct environment name");
+
+			}
+
 			prop.load(fis);
-		} catch (IOException e) {
+		} catch (
+
+		Exception e) {
 
 			e.printStackTrace();
 		}
