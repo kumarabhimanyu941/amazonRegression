@@ -7,13 +7,13 @@
   <test thread-count="5" name="Amazon Regression Test_Chrome(failed)" verbose="3">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.qa.amazon.tests.HomePageTest">
+      <class name="com.qa.amazon.tests.SearchPageTest">
         <methods>
-          <include name="setup"/>
+          <include name="performHomePageSearchTest"/>
           <include name="teardown"/>
-          <include name="IsHomePageSearchBoxEnablededTest"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.qa.amazon.tests.HomePageTest -->
+      </class> <!-- com.qa.amazon.tests.SearchPageTest -->
     </classes>
   </test> <!-- Amazon Regression Test_Chrome(failed) -->
 </suite> <!-- Failed suite [Amazon Regression Test Suite] -->
