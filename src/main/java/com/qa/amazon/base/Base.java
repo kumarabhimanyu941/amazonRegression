@@ -29,7 +29,7 @@ public class Base {
 
 		prop = new Properties();
 		envName = System.getProperty("env");
-
+        System.out.println("Given environment name is: "+ envName);
 		try {
 			if (envName == null) {
 				System.out.println("Running test cases on QA environment since no environment is passed");
