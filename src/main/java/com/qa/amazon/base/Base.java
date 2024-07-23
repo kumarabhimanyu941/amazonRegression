@@ -29,33 +29,37 @@ public class Base {
 
 		prop = new Properties();
 		envName = System.getProperty("env");
-		System.out.println("Passed Environment name is: " + envName);
 
 		try {
-			switch (envName.toLowerCase().trim()) {
-			case "qa":
-
+			if (envName == null) {
+				System.out.println("Running test cases on QA environment since no environment is passed");
 				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
+			}
 
+			switch (envName.toLowerCase()) {
+			case "qa":
+				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/qa.config.properties");
 				break;
 
 			case "stage":
 				fis = new FileInputStream("./src/main/java/com/qa/amazon/configuration/stage.config.properties");
-
 				break;
 
 			default:
-
-				throw new FrameworkException("Please pass correct environment name");
+				System.out.println("Invalid environment name.Please pass correct environment");
+				throw new FrameworkException("INVALIENVIRONMENTEXCEPTION");
 
 			}
-
-			prop.load(fis);
-		} catch (
-
-		Exception e) {
-
+		} catch (Exception e) {
 			e.printStackTrace();
+			e.getMessage();
+		}
+
+		try {
+			prop.load(fis);
+		} catch (Exception e) {
+			e.printStackTrace();
+			e.getMessage();
 		}
 		return prop;
 	}
