@@ -1,10 +1,15 @@
-allure-results/
-test-output/
-report/
-build/
-*.html
+# Test execution outputs
+/reports/
+/screenshots/
+/test-output/
 
-application.log
+# ExtentReports or Allure outputs
+/allure-results/
+/allure-report/
+
+/logs/
+*.log
+
 ##############################
 ## Java
 ##############################
@@ -15,8 +20,7 @@ application.log
 *.ear
 *.nar
 *.html
-hs_err_pid*
-activityLog.log
+
 ##############################
 ## Maven
 ##############################
